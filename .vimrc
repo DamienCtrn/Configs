@@ -142,9 +142,18 @@ augroup END
 set number
 set laststatus=2
 let g:airline_powerline_fonts = 1
-" simple minimalist jellybeans papercolor
+" Others Airline nice Themes : simple minimalist jellybeans papercolor
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
+" Powerline Symbols
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_dividers_override = [[0xe0b0], [0xe0b1], [0xe0b2], [0xe0b3]]
+let g:Powerline_symbols_override = {
+  \ 'BRANCH': [0xe238],
+  \ 'RO'    : [0xe0a2],
+  \ 'FT'    : [0xe1f6],
+  \ 'LINE'  : [0xe0a1],
+\ }
 
 " }}}
 
