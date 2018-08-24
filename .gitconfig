@@ -1,0 +1,24 @@
+[user]
+	email = damien.cathrine@laposte.net
+    name = DamienCtrn
+[core]
+    editor = vim
+[log]
+    decorate = true
+[merge]
+    conflictstyle = diff3
+    tool = tkdiff
+[push]
+    default = simple
+[alias]
+    st = status
+    cm = commit -m
+    cb = checkout -b
+    ch = checkout
+    br = branch
+    bra = branch -a
+    rbi = rebase --interactive
+    pullr = pull --rebase
+    cpx = cherry-pick -x
+    lul = log --graph --decorate --pretty=oneline --abbrev-commit
+    gud = reflog
