@@ -1,5 +1,5 @@
 [user]
-	email = damien.cathrine@laposte.net
+    email = damien.cathrine@laposte.net
     name = DamienCtrn
 [core]
     editor = vim
@@ -13,6 +13,7 @@
 [alias]
     st = status
     cm = commit -m
+    cam = commit --amend
     cb = checkout -b
     ch = checkout
     br = branch
