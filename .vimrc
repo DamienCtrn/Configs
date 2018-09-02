@@ -13,14 +13,13 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'gmarik/Vundle.vim'
 " }}}
 
 " Vundle plugins {{{
 
 " Colorschemes
 Plugin 'NLKNguyen/papercolor-theme'
-" To be able to have nice git branch in AirLine
+" To be able to have nice git branches info in AirLine
 Plugin 'tpope/vim-fugitive'
 " File Explorer Plugin
 Plugin 'scrooloose/nerdtree'
@@ -28,7 +27,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 " Plugin to highlight word occurences
 Plugin 'RRethy/vim-illuminate'
-
+" Git utility (column of modifies added for expl)
+Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 " }}}
 
@@ -64,7 +64,8 @@ set number
 set incsearch
 " Allow the usage of mouse in every mode every time
 set mouse=a
-
+" Ajust update time for gitgutter plugin
+set updatetime=100
 " Maximum number of tabs to be safe
 set tabpagemax=100
 " Highlight the search results
