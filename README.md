@@ -1,6 +1,7 @@
 # Different Personnal Configurations
 
 - **vimrc** mostly taken from [Malhorne](https://github.com/Malhorne/vimrc)
+    using [PaperColor](https://github.com/NLKNguyen/papercolor-theme) theme
 - [**oh-my-zsh**](https://github.com/robbyrussell/oh-my-zsh)
     - Theme : [PowerLevel9k](https://github.com/bhilburn/powerlevel9k)
     - Config taken from [tunnckoCore](https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tunnckocore-configuration)

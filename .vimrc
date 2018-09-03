@@ -89,8 +89,8 @@ let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
   \       'override' : {
-  \         'color00' : ['#080808', '232'],
-  \         'linenumber_bg' : ['#080808', '232']
+  \         'color00' : ['#000808', '257'],
+  \         'linenumber_bg' : ['#000808', '257']
   \       }
   \     }
   \   }, 
