@@ -212,13 +212,11 @@ augroup END
 
 " Custom mappings {{{
 
-" Move lines or grp of lines up or down (Alt + J/K)
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+" Move lines or grp of lines up "°" or down ")"
+nnoremap ) :m .+1<CR>==
+nnoremap ° :m .-2<CR>==
+vnoremap ) :m '>+1<CR>gv=gv
+vnoremap ° :m '<-2<CR>gv=gv
 
 " Enable folding with the spacebar
 nnoremap <space> za
@@ -230,15 +228,6 @@ nnoremap <silent> z/ :set scrolloff=0<CR>VHoL<Esc>:set scrolloff=1<CR>``/\%V
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-" Mapping of jk and kj to Esc to prevent finger hell
-inoremap jk <C-[>
-inoremap kj <C-[>
-
-" I've got an Azerty keyboard and I am way too lazy to switch
-" So I made a key with + and - to navigate lines
-nnoremap ) +
-nnoremap ° -
 
 " To move between the splits without having too much trouble
 nnoremap <C-J> <C-W><C-J>
