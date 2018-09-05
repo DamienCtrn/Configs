@@ -72,6 +72,8 @@ set tabpagemax=100
 set hlsearch
 " Wildmenu for command completion
 set wildmenu
+" Shows the current command
+set showcmd
 
 " }}}
 
