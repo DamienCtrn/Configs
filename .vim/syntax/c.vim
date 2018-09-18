@@ -278,7 +278,8 @@ hi def link cBoolean Boolean
 " -----------------------------------------------------------------------------
 
 " Custom Types
-syn keyword cType int8_t int16_t int32_t int64_t uint8_t uint16_t uint32_t uint64_t
+syn keyword cType specnode spec coroutine octa
+syn match cType "\<\h\w*_t\>"
 
 " Operators
 syn match cOperator	"\(<<\|>>\|[-+*/%&^|<>!=]\)="

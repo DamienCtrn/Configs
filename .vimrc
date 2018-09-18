@@ -25,6 +25,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 " Bottom bar plugin
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin to highlight word occurences
 Plugin 'RRethy/vim-illuminate'
 " Git utility (column of modifies added for expl)
@@ -43,13 +44,13 @@ filetype plugin indent on    " required
 " Basic configuration {{{
 
 " Number of spaces that a Tab produces
-set tabstop=4
+set tabstop=2
 " Number of spaces that a Tab counts for while performing editing operations
-set softtabstop=4
+set softtabstop=2
 " To use backspace anytime
 set backspace=2
 " Number of spaces used for (auto)indent
-set shiftwidth=4
+set shiftwidth=2
 " To keep the indentation when inserting new line
 set autoindent
 " To expand tabs into spaces
@@ -95,7 +96,7 @@ let g:PaperColor_Theme_Options = {
   \         'linenumber_bg' : ['#000808', '257']
   \       }
   \     }
-  \   }, 
+  \   },
   \   'language': {
   \     'python': {
   \       'highlight_builtins' : 1
@@ -207,8 +208,17 @@ augroup filetype_pkg
     " Personal use: I want sh syntax for file with .pkg extension
     autocmd BufNewFile,BufRead *.pkg set syntax=sh
 augroup END
-
+    
 " }}}
+
+" Additionnal c syntax file formats {{{
+
+augroup filetype_c
+    autocmd!
+    autocmd BufNewFile,BufRead *.i set filetype=c
+augroup END
+
+" }}}    
 
 " }}}
 
