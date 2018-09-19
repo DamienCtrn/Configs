@@ -21,6 +21,6 @@
     rbi = rebase --interactive
     pullr = pull --rebase
     cpx = cherry-pick -x
-    lul = log --graph --decorate --pretty=oneline --abbrev-commit
+    lul = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
     gud = reflog
     gg = grep -n -1 -I
