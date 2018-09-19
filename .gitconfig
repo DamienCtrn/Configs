@@ -11,7 +11,7 @@
 [push]
     default = simple
 [alias]
-    st = status
+    sb = status -sb
     cm = commit -m
     cam = commit --amend
     cb = checkout -b
@@ -23,4 +23,4 @@
     cpx = cherry-pick -x
     lul = log --graph --decorate --pretty=oneline --abbrev-commit
     gud = reflog
-    gg = grep -n -3 -I
+    gg = grep -n -1 -I
