@@ -1,6 +1,6 @@
 [user]
-    email = damien.cathrine@laposte.net
-    name = DamienCtrn
+    email = damien.cathrine@arm.com
+    name = Damien Cathrine
 [core]
     editor = vim
 [log]
@@ -11,7 +11,7 @@
 [push]
     default = simple
 [alias]
-    st = status
+    sb = status -sb
     cm = commit -m
     cam = commit --amend
     cb = checkout -b
@@ -21,5 +21,6 @@
     rbi = rebase --interactive
     pullr = pull --rebase
     cpx = cherry-pick -x
-    lul = log --graph --decorate --pretty=oneline --abbrev-commit
+    lul = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
     gud = reflog
+    gg = grep -n -1 -I
