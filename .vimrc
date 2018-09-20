@@ -242,10 +242,10 @@ nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " To move between the splits without having too much trouble
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+nnoremap <C-Down> <C-W><C-J>
+nnoremap <C-Left> <C-W><C-H>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Right> <C-W><C-L>
 
 " Leader key to Q (because ex mode is not really useful)
 let mapleader="Q"
