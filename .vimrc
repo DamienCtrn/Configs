@@ -75,6 +75,9 @@ set hlsearch
 set wildmenu
 " Shows the current command
 set showcmd
+" Setting splits to open right and below
+set splitright
+set splitbelow
 
 " }}}
 
@@ -139,6 +142,8 @@ augroup NERDTree
     " Close vim if the only tab remaining is NERDTree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
+" Start vim with NERDTree open
+autocmd vimenter * NERDTree
 
 " }}}
 
