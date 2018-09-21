@@ -142,8 +142,6 @@ augroup NERDTree
     " Close vim if the only tab remaining is NERDTree
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
-" Start vim with NERDTree open
-autocmd vimenter * NERDTree
 
 " }}}
 
