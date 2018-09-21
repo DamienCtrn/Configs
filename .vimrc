@@ -127,9 +127,9 @@ let c_syntax_for_h=1
 
 " NERDTree configuration {{{
 
-" Ignore temp files with NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$']
-" Replacing the arrow icons in NERDTree
+" Ignore temp & compiled files with NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$', '\.o$']
+" Replacing the arrow icons in NERDTree:
 let g:NERDTreeDirArrowExpandable = "+"
 let g:NERDTreeDirArrowCollapsible = "-"
 " Remap Ctrl-N to NERDTreeToggle
