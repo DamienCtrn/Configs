@@ -104,9 +104,6 @@ alias gfo='git fetch origin'
 function gfg() { git ls-files | grep $@ }
 compdef _grep gfg
 
-alias gg='git gui citool'
-alias gga='git gui citool --amend'
-
 ggf() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
   git push --force origin "${b:=$1}"
@@ -161,7 +158,7 @@ compdef _git ggpull=git-checkout
 alias ggpush='git push origin $(git_current_branch)'
 compdef _git ggpush=git-checkout
 
-alias ggre='git grep -n -1 -I'
+alias gg='git grep -n -1 -I'
 alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
