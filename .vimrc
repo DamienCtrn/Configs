@@ -227,6 +227,10 @@ augroup END
 
 " Custom mappings {{{
 
+" Move between buffers with <TAB> and <Shift + TAB>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 " Move lines or grp of lines up "°" or down ")"
 nnoremap ) :m .+1<CR>==
 nnoremap ° :m .-2<CR>==
