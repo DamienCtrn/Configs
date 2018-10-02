@@ -176,7 +176,7 @@ augroup filetype_python
     " Fold based on indentation
     autocmd FileType python set foldmethod=indent
     " Fold everything when opening a Python file
-    autocmd FileType vim setlocal foldlevel=0
+    autocmd FileType python set foldlevel=0
 augroup END
 
 " }}}
@@ -204,16 +204,6 @@ augroup END
 
 " }}}
 
-" Pkg file settings {{{
-
-augroup filetype_pkg
-    autocmd!
-    " Personal use: I want sh syntax for file with .pkg extension
-    autocmd BufNewFile,BufRead *.pkg set syntax=sh
-augroup END
-    
-" }}}
-
 " Additionnal c syntax file formats {{{
 
 augroup filetype_c
@@ -221,7 +211,7 @@ augroup filetype_c
     autocmd BufNewFile,BufRead *.i set filetype=c
 augroup END
 
-" }}}    
+" }}}
 
 " }}}
 
