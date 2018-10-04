@@ -30,6 +30,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'RRethy/vim-illuminate'
 " Git utility (column of modifies added for expl)
 Plugin 'airblade/vim-gitgutter'
+" Comments Utilitary
+Plugin 'scrooloose/nerdcommenter'
+
 " All of your Plugins must be added before the following line
 " }}}
 
@@ -164,6 +167,27 @@ let g:Powerline_symbols_override = {
 
 " }}}
 
+" NerdCommenter configuration {{{
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Don't use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" }}}
+
 " }}}
 
 " File type configurations {{{
@@ -217,6 +241,10 @@ augroup END
 
 " Custom mappings {{{
 
+" Keep the current visual block selection active after changing indent
+vmap > >gv
+vmap < <gv
+
 " Move between buffers with <TAB> and <Shift + TAB>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -226,9 +254,6 @@ nnoremap ) :m .+1<CR>==
 nnoremap ° :m .-2<CR>==
 vnoremap ) :m '>+1<CR>gv=gv
 vnoremap ° :m '<-2<CR>gv=gv
-
-" Enable folding with the spacebar
-nnoremap <space> za
 
 " Remap z/ to search inside the current screen
 nnoremap <silent> z/ :set scrolloff=0<CR>VHoL<Esc>:set scrolloff=1<CR>``/\%V
@@ -244,8 +269,9 @@ nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 
-" Leader key to Q (because ex mode is not really useful)
-let mapleader="Q"
+" Leader key to space
+let mapleader=" "
+nnoremap <space> <Nop>
 
 " Qev open a split to edit the vimrc
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>
