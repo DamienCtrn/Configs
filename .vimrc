@@ -32,6 +32,8 @@ Plugin 'RRethy/vim-illuminate'
 Plugin 'airblade/vim-gitgutter'
 " Comments Utilitary
 Plugin 'scrooloose/nerdcommenter'
+" Alignment
+Plugin 'tommcdo/vim-lion'
 
 " All of your Plugins must be added before the following line
 " }}}
@@ -186,6 +188,10 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
+" }}}
+
+" Lion configuration {{{
+let b:lion_squeeze_spaces = 1
 " }}}
 
 " }}}
