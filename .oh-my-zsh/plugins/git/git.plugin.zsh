@@ -87,11 +87,12 @@ alias gcpc='git cherry-pick --continue'
 alias gcs='git commit -S'
 
 alias gd='git diff'
+alias gdt='git difftool'
 alias gdca='git diff --cached'
 alias gdcw='git diff --cached --word-diff'
 alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
 alias gds='git diff --staged'
-alias gdt='git diff-tree --no-commit-id --name-only -r'
+alias gdtr='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
 
 gdv() { git diff -w "$@" | view - }
