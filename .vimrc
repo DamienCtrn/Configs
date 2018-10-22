@@ -34,6 +34,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 " Alignment
 Plugin 'tommcdo/vim-lion'
+" Copy to clipboard
+Plugin 'kana/vim-fakeclip'
 
 " All of your Plugins must be added before the following line
 " }}}
