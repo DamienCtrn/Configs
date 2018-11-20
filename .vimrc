@@ -85,6 +85,11 @@ set showcmd
 " Setting splits to open right and below
 set splitright
 set splitbelow
+" Cursor is kept 10 lines from border of window
+set so=10
+" Highlight current line (and not current column)
+set cursorline
+set nocursorcolumn
 
 " }}}
 
