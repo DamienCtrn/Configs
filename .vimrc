@@ -86,10 +86,12 @@ set showcmd
 set splitright
 set splitbelow
 " Cursor is kept 10 lines from border of window
-set so=10
+set so=15
 " Highlight current line (and not current column)
 set cursorline
 set nocursorcolumn
+" Set grep function to git grep
+set grepprg=git\ grep\ -n\ -I\ $*
 
 " }}}
 
@@ -314,10 +316,10 @@ nnoremap <CR> :noh<CR><CR>
 
 " Grep custom functions {{{
 
-" Mapping to grep -R current WORD under cursor
-nnoremap <leader>G :silent execute "grep! -R -I " . shellescape(expand("<cWORD>")) . " ."<cr>:redr!<cr>:copen 10<cr>
+" Mapping to grep current WORD under cursor
+nnoremap <leader>G :silent execute "grep! " . shellescape(expand("<cWORD>")) . " ."<cr>:redr!<cr>:copen 10<cr>
 
-" Operator to grep -R in visual and normal mode
+" Operator to grep in visual and normal mode
 nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@
 vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>
 
@@ -337,7 +339,7 @@ function! s:GrepOperator(type)
     endif
 
     " Execute the grep -R -I with the escape of the considered string
-    silent execute "grep! -R -I " . shellescape(@@) . " ."
+    silent execute "grep! " . shellescape(@@) . " ."
     " To prevent the silent bug
     redraw!
     " Open the quickfix window
