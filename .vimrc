@@ -36,6 +36,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tommcdo/vim-lion'
 " Copy to clipboard
 Plugin 'kana/vim-fakeclip'
+" Supertab : Completion
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 " }}}
@@ -260,9 +262,9 @@ augroup END
 vmap > >gv
 vmap < <gv
 
-" Move between buffers with <TAB> and <Shift + TAB>
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+" Cycle through buffers with Ctrl-Up and Ctrl-Down
+nnoremap <C-Up> :bnext<CR>
+nnoremap <C-Down> :bprevious<CR>
 
 " Move lines or grp of lines up "°" or down ")"
 nnoremap ) :m .+1<CR>==
@@ -275,13 +277,11 @@ nnoremap <silent> z/ :set scrolloff=0<CR>VHoL<Esc>:set scrolloff=1<CR>``/\%V
 
 " Map F10 to print which is the syntax group under the cursor
 nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-			\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-			\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+                         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+                         \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " To move between the splits without having too much trouble
-nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Left> <C-W><C-H>
-nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 
 " Leader key to space
