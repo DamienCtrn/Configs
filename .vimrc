@@ -262,9 +262,9 @@ augroup END
 vmap > >gv
 vmap < <gv
 
-" Cycle through buffers with Ctrl-Up and Ctrl-Down
-nnoremap <C-Up> :bnext<CR>
-nnoremap <C-Down> :bprevious<CR>
+" Cycle through buffers with £ (AZERTY: S-$) and µ (AZERTY: S-*)
+nnoremap £ :bnext<CR>
+nnoremap µ :bprevious<CR>
 
 " Move lines or grp of lines up "°" or down ")"
 nnoremap ) :m .+1<CR>==
@@ -283,6 +283,8 @@ nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> 
 " To move between the splits without having too much trouble
 nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-Right> <C-W><C-L>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Down> <C-W><C-J>
 
 " Leader key to space
 let mapleader=" "
