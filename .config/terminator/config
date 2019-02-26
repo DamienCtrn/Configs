@@ -34,5 +34,6 @@
     font = "SourceCodePro+Powerline+Awesome Regular, 10"
     foreground_color = "#95a6a8"
     palette = "#073642:#dc322f:#a6bf01:#d6a200:#00dfff:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_lines = 5000
     use_custom_command = True
     use_system_font = False
