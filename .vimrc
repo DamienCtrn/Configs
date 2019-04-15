@@ -38,6 +38,8 @@ Plugin 'tommcdo/vim-lion'
 Plugin 'kana/vim-fakeclip'
 " Supertab : Completion
 Plugin 'ervandew/supertab'
+" Quickfix window convenience
+Plugin 'yssl/QFEnter'
 
 " All of your Plugins must be added before the following line
 " }}}
