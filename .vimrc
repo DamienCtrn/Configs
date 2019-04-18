@@ -198,7 +198,7 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '//','right': '' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 " }}}
@@ -287,6 +287,9 @@ nnoremap <C-Left> <C-W><C-H>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Down> <C-W><C-J>
+
+" To search the visual selection
+vnoremap // y/<C-R>"<CR>
 
 " Leader key to space
 let mapleader=" "
