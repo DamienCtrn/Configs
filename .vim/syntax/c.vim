@@ -131,7 +131,7 @@ syn keyword cAnsiFunction	fmodf fmod truncl
 syn keyword cAnsiFunction	truncf trunc llroundl
 syn keyword cAnsiFunction	llroundf llround lroundl
 syn keyword cAnsiFunction	lroundf lround roundl
-syn keyword cAnsiFunction	roundf round llrintl
+"syn keyword cAnsiFunction	roundf round llrintl
 syn keyword cAnsiFunction	llrintf llrint lrintl
 syn keyword cAnsiFunction	lrintf lrint rintl
 syn keyword cAnsiFunction	rintf rint nearbyintl
