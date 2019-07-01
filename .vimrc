@@ -91,6 +91,8 @@ set splitright
 set splitbelow
 " Cursor is kept 10 lines from border of window
 set so=15
+" Do not split automatically long lines
+set formatoptions-=tc
 " Highlight current line (and not current column)
 set cursorline
 set nocursorcolumn
