@@ -35,6 +35,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Alignment
 Plugin 'tommcdo/vim-lion'
 " Copy to clipboard
+let g:fakeclip_no_default_key_mappings = 1
 Plugin 'kana/vim-fakeclip'
 " Supertab : Completion
 Plugin 'ervandew/supertab'
@@ -297,22 +298,26 @@ vnoremap // y/<C-R>"<CR>
 let mapleader=" "
 nnoremap <space> <Nop>
 
-" Qev open a split to edit the vimrc
+" to yank & paste with system clipboard
+map <leader>v <Plug>(fakeclip-y)
+map <leader>b <Plug>(fakeclip-p)
+
+" <space>ev open a split to edit the vimrc
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>
 
-" Qsv to source the vimrc
+" <space>sv to source the vimrc
 nnoremap <leader>sv :so ~/.vimrc<CR>
 
-" Qu to lower case the current word
+" <space>u to lower case the current word
 nnoremap <leader>u viwu
 
-" QU to upper case the current word
+" <space>U to upper case the current word
 nnoremap <leader>U viwU
 
-" Q" to surround the current word with double quotes
+" <space>" to surround the current word with double quotes
 nnoremap <leader>" viw<Esc>a"<Esc>bi"<Esc>lel
 
-" Q' to surround the current word with simple quotes
+" <space>' to surround the current word with simple quotes
 nnoremap <leader>' viw<Esc>a'<Esc>bi'<Esc>lel
 
 " Mapping to add a semi-colon at the end of a line
