@@ -1,6 +1,31 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Some module & source that needs to be before exporting LANG
+# ACME
+source /arm/tools/arm/depot/2.03/init/sh.d/modules-init
+module load arm/cluster
+module load util
+module load eda
+module load swdev
+module load arm/systools/1.0
+export ACME_HOME=/work/acme
+alias acme_dir="cd $ACME_HOME && source acme_env.sh"
+alias acme="./build/acme"
+
+# AutoGen / PerfCampaign configuration lines
+module load swdev python/backports.lzma_py3.6.1
+export AUTOGEN_HOME=/work/autogen
+alias activate_autogen_venv='source $AUTOGEN_HOME/venv/bin/activate'
+alias autogen='python $AUTOGEN_HOME/AutoGen'
+alias perf_campaign='python $AUTOGEN_HOME/PerfCampaign'
+alias mutagen_dir="cd /work/autogen && source set_env.sh && source $AUTOGEN_HOME/venv/bin/activate"
+
+# Setting the right locale
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
@@ -86,7 +111,6 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

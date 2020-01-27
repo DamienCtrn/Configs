@@ -12,19 +12,5 @@
     tool = vimdiff
 [push]
     default = simple
-[alias]
-    sb = status -sb
-    cm = commit -m
-    cam = commit --amend
-    cb = checkout -b
-    ch = checkout
-    br = branch
-    bra = branch -a
-    rbi = rebase --interactive
-    pullr = pull --rebase
-    cpx = cherry-pick -x
-    lul = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
-    gud = reflog
-    gg = grep -n -1 -I
 [difftool]
     prompt = false

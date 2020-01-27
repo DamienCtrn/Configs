@@ -116,8 +116,8 @@ let g:PaperColor_Theme_Options = {
   \   'theme': {
   \     'default.dark': {
   \       'override' : {
-  \         'color00' : ['#000808', '257'],
-  \         'linenumber_bg' : ['#000808', '257']
+  \         'color00' : ['#000808', '256'],
+  \         'linenumber_bg' : ['#000808', '256']
   \       }
   \     }
   \   },
@@ -301,6 +301,9 @@ nnoremap <space> <Nop>
 " to yank & paste with system clipboard
 map <leader>v <Plug>(fakeclip-y)
 map <leader>b <Plug>(fakeclip-p)
+
+" Open buffer nb 2 in split
+nnoremap <leader>n :vsp #2<CR>
 
 " <space>ev open a split to edit the vimrc
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>

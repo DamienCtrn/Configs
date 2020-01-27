@@ -14,6 +14,8 @@
   window_state = maximise
 [keybindings]
   close_term = None
+  next_tab = <Primary>Page_Up
+  prev_tab = <Primary>Page_Down
   split_horiz = <Primary><Shift>w
   split_vert = <Primary><Shift>x
   toggle_zoom = <Primary><Shift><Alt>x
